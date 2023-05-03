@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "ord";
+    src: url(../styles/Fonts/Ordibehesht/Ordibehesht.TTF);
+}
+
+.container {
+    font-family: "ord";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.container main {
+    width: 280px;
+    box-shadow:0 2px 5px 1px rgba(64,60,67,.16);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h3 {
+    margin: 0;
+    padding: 10px;
+    color: #555555;
+
+}
+
+.container a {
+    color: #fff;
+    background-color: #1f80ff;
+    padding: 2px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 60px;
+    text-align: center;
+}
+.container a:hover {
+    background-color: #2079ee;
+}
+
+@media (min-width : 1300px) {
+    .container main {
+        width: 500px;
+    }
+    .container h3 {
+        font-size: 30px;
+    }
+    .container a {
+        width: 90px;
+        font-size: 20px;
+        margin-top:18px ;
+    }
+
+}

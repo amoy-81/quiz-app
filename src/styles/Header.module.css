@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "ord";
+    src: url(../styles/Fonts/Ordibehesht/Ordibehesht.TTF);
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f80ff;
+}
+.header h2 {
+    font-family: "ord" ;
+    font-size: 40px;
+    margin: 0;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@media (max-width : 440px) {
+    .header h2 {
+        font-size: 30px;
+    }
+}
