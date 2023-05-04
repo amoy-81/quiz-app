@@ -21,3 +21,9 @@
 .lpac span {
     font-weight: bold;
 }
+
+@media (min-width : 1300px) {
+    .detailsBox {
+        width: 470px;
+    }
+}

@@ -8,10 +8,12 @@ import { Link } from 'react-router-dom';
 
 export default function QuizBox ({data , changeQuiz , joon , decriseJoon , upScore , score}) {
   const [click , setClick] = useState("DEFAULT"); 
+  const [unic , setUnic] = useState("")
   const [loading , setLoading] = useState(false);
-  const clickHandler = (event) => {
+  
+  const clickHandler = (val , id) => {
     if (click === "DEFAULT") {
-      if (event) {
+      if (val) {
         setClick("GREEN")
         setLoading(true)
   
@@ -26,19 +28,20 @@ export default function QuizBox ({data , changeQuiz , joon , decriseJoon , upSco
         setClick("RED")
         setLoading(true)
         decriseJoon()
-  
+        setUnic(id)
         setTimeout(() => {
           changeQuiz()
           setClick("DEFAULT")
           setLoading(false)
+          setUnic("")
         } , 3000)
       }
     }
   }
-  if (score > 10) {
+  if (score >= 10) {
     return (
       <div className={styles.container}>
-        <h3>!آفرییین برنده شدید</h3>
+        <h3>آفرییین برنده شدید!</h3>
         <Link to='/'>بازگشت</Link>
       </div>
     )
@@ -46,7 +49,8 @@ export default function QuizBox ({data , changeQuiz , joon , decriseJoon , upSco
   if (joon === 0) {
     return (
       <div className={styles.container}>
-        <h3>!باختید</h3>
+        <h3>باختید!</h3>
+        <p style={{marginTop : "0" , fontSize: "20px" , fontWeight: "bold"}}>{score}</p>
         <Link to='/'>بازگشت</Link>
       </div>
     )
@@ -58,7 +62,7 @@ export default function QuizBox ({data , changeQuiz , joon , decriseJoon , upSco
       </div>
       <div className={styles.answersBox}>
         {
-          data.answers.map(answer => <p key={answer.id} onClick={() => clickHandler(answer.val)} className={(click === "GREEN" && answer.val ? styles.green : "") ||(click === "RED" && !answer.val ? styles.red : "") ||(click === "RED" && answer.val ? styles.green : "") }>{answer.text}</p>)
+          data.answers.map(answer => <p key={answer.id} onClick={() => clickHandler(answer.val , answer.id)} className={(click === "GREEN" && answer.val ? styles.green : "") ||(click === "RED" && !answer.val && answer.id === unic ? styles.red : "") ||(click === "RED" && answer.val ? styles.green : "") }>{answer.text}</p>)
         }
       </div>
       <div className={styles.loading}>

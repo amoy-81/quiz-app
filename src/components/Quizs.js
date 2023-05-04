@@ -13,7 +13,7 @@ export default function Quizs() {
   const {data} = useContext(ContextData);
   const [qNum , setQNum] = useState(0);
   const [joon , setJoon] = useState(2);
-  const [score , setScore] = useState(1);
+  const [score , setScore] = useState(0);
   
 
 

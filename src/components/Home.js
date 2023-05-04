@@ -9,7 +9,7 @@ export default function Home() {
     <div className={styles.container}>
       <main>
         <h3>چند تا سوال جواب میدی ؟</h3>
-        <Link to="/quizs">شروع</Link>
+        <Link to="/quizs">آره</Link>
       </main>
     </div>
   )
