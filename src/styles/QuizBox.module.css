@@ -1,0 +1,59 @@
+/* bac #ACC1DE #e6cfe4  #4b93bb  */
+@font-face {
+    font-family: "ord";
+    src: url(../styles/Fonts/Ordibehesht/Ordibehesht.TTF);
+}
+
+.container {
+    font-family: 'ord';
+    width: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.quizHead {
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(#4b93bb , #5fb2df);
+    border-radius: 10px;
+    
+    
+}
+.quizHead h3 {
+    margin: 0;
+    font-size: 20px;
+    padding: 20px;
+    color: #fff;
+}
+
+.answersBox {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+.answersBox p {
+    background:linear-gradient(#ffffff , #d8f2ff);
+    border-radius: 10px;
+    text-align: center;
+    color: #3a3a3a;
+    cursor: pointer;
+}
+.answersBox p:active {
+    background:linear-gradient(#dfdfdf , #c1d7e2);
+}
+
+.green {
+    background:linear-gradient(#92fa56 , #7dbb59)!important; 
+}
+.red {
+    background:linear-gradient(#fa5656 , #bb5959)!important; 
+}

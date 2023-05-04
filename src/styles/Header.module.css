@@ -6,17 +6,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1f80ff;
 }
 .header h2 {
     font-family: "ord" ;
     font-size: 40px;
     margin: 0;
-    color: #fff;
+    color: #3a3a3a;
     padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: 0;
     
 }
 
