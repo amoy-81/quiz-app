@@ -1,0 +1,23 @@
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.detailsBox {
+    display: flex;
+    width: 260px;
+    justify-content: space-between;
+}
+.lpac {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lpac img {
+    width: 20px;
+}
+.lpac span {
+    font-weight: bold;
+}
