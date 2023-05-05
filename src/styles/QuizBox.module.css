@@ -36,7 +36,7 @@
     align-items: center;
     background:linear-gradient(#4b93bb , #5fb2df);
     border-radius: 10px;
-    
+    box-shadow:0 2px 5px 1px rgba(64, 60, 67, 0.116);
     
 }
 .quizHead h3 {
@@ -52,7 +52,7 @@
     grid-template-columns: 48% 48%;
     justify-content: space-between;
     padding: 10px;
-
+    
 }
 .answersBox p {
     background:linear-gradient(#ffffff , #d8f2ff);
@@ -62,18 +62,23 @@
     text-align: center;
     color: #3a3a3a;
     cursor: pointer;
+    box-shadow:0 2px 5px 1px rgba(64, 60, 67, 0.096);
 }
 .answersBox p:active {
     background:linear-gradient(#dfdfdf , #c1d7e2);
 }
-
+.timer span {
+    font-size: 30px;
+}
 .green {
     background:linear-gradient(#92fa56 , #7dbb59)!important; 
 }
 .red {
     background:linear-gradient(#fa5656 , #bb5959)!important; 
 }
-
+#endTime {
+    background:linear-gradient(#bbb04b , #dfcc5f) !important;
+}
 @media (min-width : 1300px) {
     .quizHead {
         width: 500px;

@@ -24,7 +24,9 @@ export default function Quizs() {
     setScore(prev => (prev + 1))
   }
   const decriseJoon = () => {
-    setJoon(prev => (prev - 1))
+    if (joon > 0) {
+      setJoon(prev => (prev - 1))
+    }
   }
     return (
     <div  className={styles.container} >
