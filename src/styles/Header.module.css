@@ -4,6 +4,7 @@
 }
 .header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -13,15 +14,24 @@
     margin: 0;
     color: #3a3a3a;
     padding: 5px;
+    padding-bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     outline: 0;
     
 }
+.header span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #3a3a3a;
+}
 
 @media (max-width : 440px) {
     .header h2 {
         font-size: 30px;
+    }
+    .header span {
+        font-size: 10px;
     }
 }

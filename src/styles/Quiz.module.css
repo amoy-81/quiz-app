@@ -22,7 +22,7 @@
     font-weight: bold;
 }
 
-@media (min-width : 1300px) {
+@media (min-width : 700px) {
     .detailsBox {
         width: 470px;
     }

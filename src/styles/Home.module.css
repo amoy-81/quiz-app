@@ -21,6 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
 }
 .container main h4 {
     font-size: 20px;
@@ -57,7 +58,7 @@
     background-color: #f0faff;
 }
 
-@media (min-width : 1300px) {
+@media (min-width : 700px) {
     .container main {
         width: 500px;
     }

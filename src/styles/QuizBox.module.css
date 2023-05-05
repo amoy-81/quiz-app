@@ -79,7 +79,7 @@
 #endTime {
     background:linear-gradient(#bbb04b , #dfcc5f) !important;
 }
-@media (min-width : 1300px) {
+@media (min-width : 700px) {
     .quizHead {
         width: 500px;
     }

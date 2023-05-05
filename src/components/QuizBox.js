@@ -1,10 +1,12 @@
 import React , { useEffect, useState } from 'react'
-
 // Styles
 import styles from "../styles/QuizBox.module.css";
 
 import Loader from "../components/Shared/Loader"
 import { Link } from 'react-router-dom';
+
+// Sounds
+import { touch } from '../sounds/sounds';
 
 export default function QuizBox ({data , changeQuiz , joon , decriseJoon , upScore , score}) {
   const [click , setClick] = useState("DEFAULT"); 
@@ -23,6 +25,7 @@ export default function QuizBox ({data , changeQuiz , joon , decriseJoon , upSco
   
   },[])
   const clickHandler = (val , id) => {
+    touch();
     if (click === "DEFAULT" && score >= 0) {
       if (val) {
         setClick("GREEN")
@@ -57,14 +60,14 @@ export default function QuizBox ({data , changeQuiz , joon , decriseJoon , upSco
     }
   }
  if (timer < 1 && timer > -1) {
-    
     clickHandler(false , "")
   } 
   if (score >= 10) {
     return (
+      
       <div className={styles.container}>
         <h3>آفرییین برنده شدید!</h3>
-        <Link to='/'>بازگشت</Link>
+        <Link to='/' onClick={() => touch()}>بازگشت</Link>
       </div>
     )
   }
@@ -73,7 +76,7 @@ export default function QuizBox ({data , changeQuiz , joon , decriseJoon , upSco
       <div className={styles.container}>
         <h3>باختید!</h3>
         <p style={{marginTop : "0" , fontSize: "20px" , fontWeight: "bold"}}>{score}</p>
-        <Link to='/'>بازگشت</Link>
+        <Link to='/' onClick={() => touch()}>بازگشت</Link>
       </div>
     )
   }
